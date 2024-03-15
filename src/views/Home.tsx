@@ -1,11 +1,12 @@
 import React from "react";
-import {ScrollView, Text} from "react-native";
+import Container from "../components/Container";
+import {Text} from "react-native";
 
 const Home: React.FC = () => {
     return (
-        <ScrollView>
-            <Text>Home</Text>
-        </ScrollView>
+        <Container>
+            <Text>Hello, World</Text>
+        </Container>
     );
 }
 
