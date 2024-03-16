@@ -10,15 +10,17 @@ const colors: {
     success: string,
     danger: string,
     warning: string,
-    info: string
+    info: string,
+    navbarActive: string
 } = {
-    background: '#fefae0',
+    background: '#f6e8cb',
     primary: '#bc6c25',
     dark: '#252422',
     success: '#606c38',
     danger: '#ae2012',
     warning: '#ca6702',
-    info: '#335c67'
+    info: '#335c67',
+    navbarActive: '#753c0a'
 }
 
 const theme: object = {

@@ -2,6 +2,7 @@ import { Platform, ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { useTheme } from "@react-navigation/native";
 import SearchbarComponent from "./SearchbarComponent";
+import Navbar from "./Generic/Navbar";
 
 type ContainerProps = {
     children: any,
@@ -14,7 +15,7 @@ const Container = ({
 }: ContainerProps) => {
     const { colors } = useTheme();
     return (
-        <>
+        <View style={{position: 'relative', minHeight: '100%'}}>
             {showSearchbar &&
                 <View style={{ ...style.searchbarContainer, backgroundColor: colors.background }}>
                     <SearchbarComponent />
@@ -23,7 +24,10 @@ const Container = ({
             <ScrollView style={{ backgroundColor: colors.background, marginTop: 15, position: 'relative'}} contentContainerStyle={style.scrollViewContent}>
                 {children}
             </ScrollView>
-        </>
+            <View style={{position: 'absolute', bottom: 30, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <Navbar />
+            </View>
+        </View>
     );
 }
 
