@@ -1,5 +1,7 @@
 import {DefaultTheme} from "@react-navigation/native";
 
+const BORDER_RADIUS: number = 8;
+
 /** C O L O R S **/
 const colors: {
     background: string,
@@ -24,7 +26,7 @@ const theme: object = {
     colors,
     dark: false,
 
-    borderRadius: 8,
+    borderRadius: BORDER_RADIUS,
 
     /** T E X T S **/
     texts: {
@@ -34,6 +36,50 @@ const theme: object = {
                 color: colors.dark
             }
         }
+    },
+
+    card: {
+        generic: {
+            position: 'relative',
+            borderRadius: BORDER_RADIUS,
+            backgroundColor: '#fff',
+            overflow: 'hidden',
+            elevation: 2, // Shadow android
+            shadowColor: '#000', // iOS shadow
+            shadowOpacity: 0.2, // iOS shadow
+            shadowOffset: { width: 0, height: 5 }, // iOS shadow
+            shadowRadius: 5, // iOS shadow
+            marginBottom: 10
+
+        },
+        image: {
+            width: '100%',
+            height: 150, // or any fixed height you want
+            position: 'absolute',
+            top: 0,
+            left: 0,
+        },
+        contentContainer: {
+          padding: 15,
+          paddingTop: 150
+        },
+        title: {
+            fontSize: 18,
+            fontWeight: 'bold',
+            marginBottom: 5,
+        },
+        content: {
+            fontSize: 16,
+        },
+    },
+
+    row: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        flex: 1,
+        justifyContent: 'space-between'
     }
 };
 

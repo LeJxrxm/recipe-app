@@ -4,14 +4,16 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from "./src/views/Home";
 import theme from "./src/theme/theme";
+import Recipe from "./src/views/Recipe";
 
 export default function App() {
 
     const Stack = createNativeStackNavigator();
     return (
       <NavigationContainer theme={theme}>
-        <Stack.Navigator screenOptions={{headerShown: false}}>
-          <Stack.Screen name="Home" component={Home}/>
+        <Stack.Navigator screenOptions={{headerShown: true}}>
+          <Stack.Screen name="Accueil" component={Home}/>
+          <Stack.Screen name="Recette" component={Recipe}/>
         </Stack.Navigator>
       </NavigationContainer>
   );

@@ -18,7 +18,9 @@ const SearchbarComponent: React.FC = (props: any) => {
             paddingHorizontal: 10,
             width: '80%',
             backgroundColor: '#ffffff',
-            borderRadius: theme.borderRadius
+            borderRadius: theme.borderRadius,
+            opacity: 1,
+            marginTop: 35
         }
     });
 
