@@ -7,7 +7,7 @@ const Recipe: React.FC = ({route}: any) => {
     const params: object = route.params;
     const {recipe}: any = params
     console.log(recipe);
-    const {colors, borderRadius} = useTheme();
+    const {colors, borderRadius}: any = useTheme();
     return (
         <>
             <Container showSearchbar={false}>

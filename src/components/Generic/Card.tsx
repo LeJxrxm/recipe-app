@@ -1,5 +1,6 @@
-import {Image, Text, View} from "react-native";
+import {Image, Text, TouchableOpacity, View} from "react-native";
 import {useTheme} from "@react-navigation/native";
+import {useState} from "react";
 
 type props = {
     image: string|null,
@@ -15,15 +16,20 @@ const Card = ({
     onClick
 }: props) => {
 
-    const {card, colors} = useTheme();
+    const {card, colors}: any = useTheme();
 
     return (
-        <View onTouchEndCapture={onClick} style={{...card.generic, width}}>
-            <Image style={card.image} source={{uri: image}} resizeMode={"cover"}/>
-            <View style={card.contentContainer}>
-                <Text style={card.title}>{titre}</Text>
+        <TouchableOpacity
+            style={{...card.generic, width}}
+            onPress={onClick}
+        >
+            <View>
+                <Image style={card.image} source={{uri: image}} resizeMode={"cover"}/>
+                <View style={card.contentContainer}>
+                    <Text style={card.title}>{titre}</Text>
+                </View>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 };
 
