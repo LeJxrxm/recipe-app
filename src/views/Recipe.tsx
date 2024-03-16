@@ -4,7 +4,7 @@ import {ParamListBase} from "@react-navigation/native";
 
 const Recipe: React.FC = ({route}) => {
     const params: object = route.params;
-    const {recipe: recipe} = params
+    const {recipe} = params
     console.log(recipe);
     return (
         <>

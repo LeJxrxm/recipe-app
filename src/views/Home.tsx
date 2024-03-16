@@ -6,7 +6,7 @@ import {useTheme} from "@react-navigation/native";
 
 const Home: React.FC = () => {
 
-    const recipes: Array<recipe> = [
+    const recipes: Array<Recipe> = [
         {
             titre: 'Camembert fondu',
             image: 'https://assets.afcdn.com/recipe/20201104/115298_w1024h768c1cx2250cy1502cxt0cyt0cxb4500cyb3004.jpg',
@@ -33,7 +33,7 @@ const Home: React.FC = () => {
     return (
         <Container showSearchbar={true}>
             <View style={row}>
-                {recipes.map((recipe: recipe) => {
+                {recipes.map((recipe: Recipe) => {
                     return (
                         <RecipePreview recipe={recipe}/>
                     )

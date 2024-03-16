@@ -3,7 +3,7 @@ import Card from "./Generic/Card";
 import {useNavigation} from "@react-navigation/native";
 
 type props = {
-    recipe: recipe
+    recipe: Recipe
 }
 
 const RecipePreview = ({
